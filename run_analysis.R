@@ -27,34 +27,34 @@ features <- read.table(paste(dataFolder, "/features.txt", sep = ""),
 features <- features[, 2]
 
 # Read Test dataset with labels
-test_x <- read.table(
+test.x <- read.table(
     paste(dataFolder, "/test/X_test.txt", sep = ""),
     col.names = features,
     header = F
 )
-test_y <- read.table(
+test.y <- read.table(
     paste(dataFolder, "/test/y_test.txt", sep = ""),
     col.names = "Activity",
     header = F
 )
-test_subject <- read.table(
+test.subject <- read.table(
     paste(dataFolder, "/test/subject_test.txt", sep = ""),
     col.names = "Subject",
     header = F
 )
 
 # Read Training dataset with labels
-train_x <- read.table(
+train.x <- read.table(
     paste(dataFolder, "/train/X_train.txt", sep = ""),
     col.names = features,
     header = F
 )
-train_y <- read.table(
+train.y <- read.table(
     paste(dataFolder, "/train/y_train.txt", sep = ""),
     col.names = "Activity",
     header = F
 )
-train_subject <- read.table(
+train.subject <- read.table(
     paste(dataFolder, "/train/subject_train.txt", sep = ""),
     col.names = "Subject",
     header = F
@@ -66,10 +66,10 @@ train_subject <- read.table(
 #
 
 # Create Test data frame binding columns
-test <- cbind(test_subject, test_y, test_x)
+test <- cbind(test.subject, test.y, test.x)
 
 # Create Training data frame binding columns
-train <- cbind(train_subject, train_y, train_x)
+train <- cbind(train.subject, train.y, train.x)
 
 
 # Merge training and test datasets
