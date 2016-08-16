@@ -10,9 +10,9 @@ R script run_analysis.R has been created for this purpose.
 - Read Training dataset with labels to “subject”, “y” and “x” data frames
 
 ## 1. Merges the training and the test sets to create one data set.
-Use cbind() function to bind “subject”, “y” and “x” data frames created in previous step and create “test” and “train” data frames.
-Use rbind() function to merge “test” and “train” data frames
-Remove unnecessary objects.
+- Use cbind() function to bind “subject”, “y” and “x” data frames created in previous step and create “test” and “train” data frames.
+- Use rbind() function to merge “test” and “train” data frames
+- Remove unnecessary objects.
 
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 Use grepl() to filter the columns matching “mean”, “std”,  “Activity”, and “Subject".
@@ -23,8 +23,8 @@ Read “activity_labels.txt” to obtain activity names. Use factor() method to 
 ## 4. Appropriately labels the data set with descriptive variable names.
 Use sub() method to fix column names.
 
-## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Use plyr package to get a tidy data set with the average of each variable for each activity and each subject.
+## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+Use plyr package to get a tidy data set with the average of each variable for each activity and each subject. 
 Write tidy data set to file “./data/tidyData.txt”.
 
 ## Tidy Data Columns
